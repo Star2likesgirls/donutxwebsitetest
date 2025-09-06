@@ -29,7 +29,7 @@
 
         .particle {
             position: absolute;
-            background: #00ff88;
+            background: #2795F5;
             border-radius: 50%;
             opacity: 0.3;
             animation: float 8s infinite ease-in-out;
@@ -56,24 +56,30 @@
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #00ff88, #00cc70);
             margin: 0 auto 30px auto;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-size: 48px;
             font-weight: bold;
-            color: #000;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+            color: #2795F5;
+            text-shadow: 0 0 20px rgba(39, 149, 245, 0.6),
+                         0 0 40px rgba(39, 149, 245, 0.4),
+                         0 0 60px rgba(39, 149, 245, 0.2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .title {
             font-size: 4rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #00ff88, #ffffff);
+            background: linear-gradient(135deg, #2795F5, #ffffff);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -87,7 +93,7 @@
         }
 
         .tagline {
-            color: #00ff88;
+            color: #2795F5;
             font-size: 1rem;
             margin-bottom: 40px;
         }
@@ -104,7 +110,7 @@
         }
 
         .hero-title .highlight {
-            color: #00ff88;
+            color: #2795F5;
         }
 
         .hero-description {
@@ -117,7 +123,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #00ff88, #00cc70);
+            background: linear-gradient(135deg, #2795F5, #1e7ad4);
             color: #000000;
             padding: 16px 40px;
             border-radius: 8px;
@@ -125,12 +131,12 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 4px 15px rgba(39, 149, 245, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+            box-shadow: 0 8px 25px rgba(39, 149, 245, 0.4);
         }
 
         .features-section {
@@ -142,7 +148,7 @@
             font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 60px;
-            color: #00ff88;
+            color: #2795F5;
         }
 
         .features-grid {
@@ -154,7 +160,7 @@
 
         .feature-card {
             background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-            border: 1px solid rgba(0, 255, 136, 0.2);
+            border: 1px solid rgba(39, 149, 245, 0.2);
             border-radius: 12px;
             padding: 30px;
             transition: all 0.3s ease;
@@ -163,8 +169,8 @@
 
         .feature-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(0, 255, 136, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.15);
+            border-color: rgba(39, 149, 245, 0.5);
+            box-shadow: 0 10px 30px rgba(39, 149, 245, 0.15);
         }
 
         .feature-title {
@@ -189,12 +195,12 @@
             max-width: 80%;
             border-radius: 12px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(0, 255, 136, 0.2);
+            border: 1px solid rgba(39, 149, 245, 0.2);
         }
 
         .mockup-container {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 112, 0.05));
-            border: 1px solid rgba(0, 255, 136, 0.2);
+            background: linear-gradient(135deg, rgba(39, 149, 245, 0.1), rgba(30, 122, 212, 0.05));
+            border: 1px solid rgba(39, 149, 245, 0.2);
             border-radius: 12px;
             padding: 40px;
             margin: 40px auto;
@@ -204,7 +210,7 @@
 
         .mockup-placeholder {
             background: rgba(255, 255, 255, 0.05);
-            border: 2px dashed rgba(0, 255, 136, 0.3);
+            border: 2px dashed rgba(39, 149, 245, 0.3);
             border-radius: 8px;
             padding: 60px;
             color: #666;
@@ -223,6 +229,10 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
+            .logo-text {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
@@ -231,14 +241,14 @@
     
     <div class="container">
         <div class="header">
-            <div class="logo">DX</div>
-            <h1 class="title">DonutX</h1>
+            <a href="#" class="logo">
+                <div class="logo-text">DonutX</div>
+            </a>
             <p class="subtitle">The ultimate utility client for the DonutSmp and PVP.</p>
             <p class="tagline">Best Utility client there is</p>
         </div>
         <meta property="og:title" content="DonutX" />
         <meta property="og:description" content="The ultimate utility client for the DonutSmp and PVP." />
-        <meta property="og:image" content="https://media.discordapp.net/attachments/1407490953400287393/1407857196003229706/logo1.png?ex=68a7a0b0&is=68a64f30&hm=b5e00ff07052b718de2cb8af9d5be6716dcc0daf497271b706cc623377b2ae80&=&format=webp&quality=lossless&width=1322&height=881" />
         <meta property="og:url" content="https://star2likesgirls.github.io/drycrashaddon/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DonutX" />
@@ -341,7 +351,7 @@
         // Add hover effects
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.background = 'linear-gradient(135deg, rgba(0,255,136,0.08), rgba(0,255,136,0.03))';
+                this.style.background = 'linear-gradient(135deg, rgba(39,149,245,0.08), rgba(39,149,245,0.03))';
             });
             
             card.addEventListener('mouseleave', function() {
